@@ -4,24 +4,26 @@
  * main - first 50 fibonacci number
  * Return: 0 if successful
  */
-
 int main(void)
 {
-	int ii, n1 = 1, n2 = 2, nLast = 50;
-	long int result;
+	long int i, j, k, next;
 
-	printf("%d, %d, ", n1, n2);
+	j = 1;
 
-	for (ii = 2; ii < nLast; ii++)
+	k = 2;
+
+	for (i = 1; i <= 50; ++i)
 	{
-		result = n1 + n2;
-		n1 = n2;
-		n2 = result;
-		printf("%lu", result);
-		if (ii != nLast)
-			printf(", ");
-	}
-	printf("\n");
-	return (0);
+		if (j != 20365011074)
+		{
+			printf("%ld, ", j);
+		} else
+		{
+			printf("%ld\n", j);
+			next = j + k;
+			j = k;
+			k = next;
+		}
 
+		return (0);
 }
