@@ -1,9 +1,9 @@
 #include <stdio.h>
 #include "main.h"
 /**
- *  * print_to_98 - print all natural numbers from var to 98
+ * print_to_98 - print all natural numbers from var to 98
  *
- *   * @var: the starting limit
+ * @var: the starting limit
  */
 
 void print_to_98(int var)
