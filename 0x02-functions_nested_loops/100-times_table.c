@@ -1,39 +1,30 @@
-#include "main.h"
+#include <stdio.h>
+
 /**
- * print_times_table - prints the n times table, starting with 0
- * @n: time table to print
+ * main - prints the first 50 Fibonacci numbers, starting with 1 and 2
+ * followed by a new line
+ * Return: Always 0 (Success)
  */
-
-void print_times_table(int n)
+int main(void)
 {
-	if (n < 0 || n > 15)
-		_putchar('\n');
-	int ii, jj, mul;
+	long int i, j, k, next;
 
-	for (ii = 0; ii <= n; ii++)
+	j = 1;
+
+	k = 2;
+
+	for (i = 1; i <= 50; ++i)
 	{
-
-		for (jj = 0; jj <= n; jj++)
+		if (j != 20365011074)
 		{
-			mul = ii * jj;
-			if (jj == 0)
-				_putchar('0' + mul);
-			else if (mul < 10)
-			{
-				_putchar(' ');
-				_putchar('0' + mul);
-			}
-			else
-			{
-				print(mul);
-			}
-			if (jj < n)
-			{
-				_putchar(',');
-				_putchar(' ');
-			}
+			printf("%ld, ", j);
+		} else
+		{
+			printf("%ld\n", j);
 		}
-		_putchar('\n');
+		next = j + k;
+		j = k;
+		k = next;
 	}
-
+	return (0);
 }
