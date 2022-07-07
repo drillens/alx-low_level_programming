@@ -1,4 +1,3 @@
- 16 lines (15 sloc) 224 Bytes
 #include "main.h"
 /**
  * print_numbers - prints the numbers, from 0 to 9, followed by a new line
