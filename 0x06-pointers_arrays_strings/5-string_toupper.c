@@ -1,21 +1,19 @@
 #include "main.h"
 
 /**
- * string_toupper - convert to uppercase
- * @k: char pointer
- *
- * Return: char pointer
+ * string_toupper - changes all lowercase leters
+ * @s: string
+ * Return: dest
  */
-
-char *string_toupper(char *k)
+char *string_toupper(char *s)
 {
-	int i, x;
+	int count = 0;
 
-	for (i = 0; k[i] != '\0'; i++)
+	while (*(s + count) != '\0')
 	{
-		x = k[i] >= 'a' && k[i] <= 'z' ? k[i] - 'a' + 'A' : k[i];
-		k[i] = x;
+		if ((*(s + count) >= 97) && (*(s + count) <= 122))
+			*(s + count) = *(s + count) - 32;
+		count++;
 	}
-
-	return (k);
+	return (s);
 }
