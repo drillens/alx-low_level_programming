@@ -1,26 +1,20 @@
 #include "main.h"
+
 /**
- *_strcat - It concatenates two strings.
- *@dest: the destination string we append to.
- *@src: the source string we add to.
- *Return: A pointer to dest, i.e the resulting string. :)
+ * _memset - fills n bytes
+ * @s: pointer to the char parameters
+ * @b: data to change
+ * @n: index
+ * Return: *s
  */
-char *_strcat(char *dest, char *src)
+char *_memset(char *s, char b, unsigned int n)
 {
-	int i = 0, j = 0;
+	unsigned int i;
 
-	while (*(dest + i) != '\0')
+	for (i = 0; i < n; i++)
 	{
-		i++;
+		s[i] = b;
 	}
 
-	while (j >= 0)
-	{
-		*(dest + i) = *(src + j);
-		if (*(src + j) == '\0')
-			break;
-		i++;
-		j++;
-	}
-	return (dest);
+	return (s);
 }
